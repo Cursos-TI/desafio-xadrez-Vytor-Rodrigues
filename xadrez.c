@@ -1,32 +1,578 @@
 #include <stdio.h>
 
-// Desafio de Xadrez - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
+int main(){
+//1rei
+//2rainha
+//3bispo
+//6cavalo
+int menu1;
 
-int main() {
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
+printf("*******MOVIMENTACAO PECAS DE XADREZ*******\n");
+printf("1. Peao\n");
+printf("2. Torre\n");
+printf("3. Bispo\n");
+printf("4. Torre\n");
+printf("5. Rei\n");
+printf("6. Rainha\n");
+scanf("%d", &menu1);
+    int direcaomenu;
+    unsigned int numerodevezes;
+switch (menu1)
+{
+    //movi peao
+    case 1:
 
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
+    printf("O peao move-se apenas no maximo duas, Para qual direcao voce quer mover?\n");
+    printf("1. Cima\n");
+    printf("2. Baixo\n");
+    printf("3. Esquerda\n");
+    printf("4. Direita\n");
+    scanf("%d", &direcaomenu);
+    switch (direcaomenu)
+    {
+    case 1:
+  printf("Quantas Vezes?\n");
+    scanf("%u", &numerodevezes);
 
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
+       if (numerodevezes >= 1 && numerodevezes < 3)
+    {
+      
+    
 
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
+    for (int peao = 0; peao <= numerodevezes - 1; peao++)
+    {
+        printf("Cima \n");
+    } 
+ }else{
+        printf("voce digitou um numero de vezes que o peao nao anda.");
+     }
+   
+    break;
 
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
+    case 2:
 
-    // Nível Mestre - Funções Recursivas e Loops Aninhados
-    // Sugestão: Substitua as movimentações das peças por funções recursivas.
-    // Exemplo: Crie uma função recursiva para o movimento do Bispo.
+   
+    printf("Quantas Vezes?\n");
+    scanf("%d", &numerodevezes);
+    if (numerodevezes >= 1 && numerodevezes < 3)
+    {
+       
+    for (int peao = 0; peao <= numerodevezes - 1; peao++)
+    {
+        printf("Baixo \n");
+    }  
+}else{
+        printf("voce digitou um numero de vezes que o peao nao anda.");
+     }
+    break;
 
-    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
+    case 3:
+ 
+        
+   
+    printf("Quantas Vezes?\n");
+    scanf("%d", &numerodevezes);
+   if (numerodevezes >= 1 && numerodevezes < 3)
+    {
+    for (int peao = 0; peao <= numerodevezes - 1; peao++)
+    {
+        printf("Esquerda \n");
+    } 
+     }else{
+        printf("voce digitou um numero de vezes que o peao nao anda.");
+     }
+    
+    break;
 
-    return 0;
+    case 4:
+
+        printf("Quantas Vezes?\n");
+    scanf("%d", &numerodevezes);
+    if (numerodevezes >= 1 && numerodevezes < 3)
+    {
+    for (int peao = 0; peao <= numerodevezes - 1; peao++)
+    {
+        printf("Direita \n");
+    } 
+  }else{
+        printf("voce digitou um numero de vezes que o peao nao anda.");
+     }
+    break;
+    
+    default:
+    printf("Opcao invalida!");
+
+        break;
+
+    }
+
+    break;
+
+////////Torre movi
+    case 2:
+ printf("A Torre move-se quantas vezes quiser para qualquer lado, Para qual direcao voce quer mover?\n");
+    printf("1. Cima\n");
+    printf("2. Baixo\n");
+    printf("3. Esquerda\n");
+    printf("4. Direita\n");
+    scanf("%d", &direcaomenu);
+    switch (direcaomenu)
+    {
+    case 1:
+    printf("Quantas Vezes?\n");
+    scanf("%d", &numerodevezes);
+
+    if (numerodevezes >= 1 && numerodevezes < 9)
+    {
+       
+    
+
+    for (int peao = 0; peao <= numerodevezes - 1; peao++)
+    {
+        printf("Cima \n");
+    } 
+ }else{
+        printf("Sua torre saiu do TABULEIRO.");
+     }
+   
+    break;
+
+    case 2:
+   
+   
+    printf("Quantas Vezes?\n");
+    scanf("%d", &numerodevezes);
+ if (numerodevezes >= 1 && numerodevezes < 9)
+    {
+       
+    for (int peao = 0; peao <= numerodevezes - 1; peao++)
+    {
+        printf("Baixo \n");
+    }  
+}else{
+        printf("Sua torre saiu do TABULEIRO.");
+     }
+    break;
+
+    case 3:
+ 
+    printf("Quantas Vezes?\n");
+    scanf("%d", &numerodevezes);
+   if (numerodevezes >= 1 && numerodevezes < 9)
+    {
+        
+   
+    for (int peao = 0; peao <= numerodevezes - 1; peao++)
+    {
+        printf("Esquerda \n");
+    } 
+     }else{
+        printf("Sua torre saiu do TABULEIRO.");
+     }
+    
+    break;
+
+    case 4:
+ 
+
+    printf("Quantas Vezes?\n");
+    scanf("%d", &numerodevezes);
+   if (numerodevezes >= 1 && numerodevezes < 9)
+    {
+      
+   
+    for (int peao = 0; peao <= numerodevezes - 1; peao++)
+    {
+        printf("Direita \n");
+    } 
+  }else{
+        printf("Sua torre saiu do TABULEIRO.");
+     }
+    break;
+    
+    default:
+    printf("Opcao invalida!");
+        break;
+    }
+
+ 
+    break;
+    case 3:
+    //Bispo movi
+    printf("O Bispo move-se na diagonal para qualquer lado, Para qual direcao voce quer mover?\n");
+    printf("1. Cima Direita\n");
+    printf("2. Baixo Direita\n");
+    printf("3. Cima Esquerda \n");
+    printf("4. Baixo Esquerda\n");
+    scanf("%d", &direcaomenu);
+    switch (direcaomenu)
+    {
+    case 1:
+    printf("Quantas Vezes?\n");
+    scanf("%d", &numerodevezes);
+
+    if (numerodevezes >= 1 && numerodevezes < 9)
+    {
+       
+    
+
+    for (int peao = 0; peao <= numerodevezes - 1; peao++)
+    {
+        printf("Cima Direita\n");
+    } 
+ }else{
+        printf("Seu Bispo saiu do TABULEIRO.");
+     }
+   
+    break;
+
+    case 2:
+   
+   
+    printf("Quantas Vezes?\n");
+    scanf("%d", &numerodevezes);
+ if (numerodevezes >= 1 && numerodevezes < 9)
+    {
+       
+    for (int peao = 0; peao <= numerodevezes - 1; peao++)
+    {
+        printf("Baixo Direita\n");
+    }  
+}else{
+        printf("Seu Bispo saiu do TABULEIRO.");
+     }
+    break;
+
+    case 3:
+ 
+    printf("Quantas Vezes?\n");
+    scanf("%d", &numerodevezes);
+   if (numerodevezes >= 1 && numerodevezes < 9)
+    {
+        
+   
+    for (int peao = 0; peao <= numerodevezes - 1; peao++)
+    {
+        printf("Cima Esquerda \n");
+    } 
+     }else{
+        printf("Seu Bispo saiu do TABULEIRO.");
+     }
+    
+    break;
+
+    case 4:
+ 
+
+    printf("Quantas Vezes?\n");
+    scanf("%d", &numerodevezes);
+   if (numerodevezes >= 1 && numerodevezes < 9)
+    {
+      
+   
+    for (int peao = 0; peao <= numerodevezes - 1; peao++)
+    {
+        printf("Baixo Esquerda\n");
+    } 
+  }else{
+        printf("Seu Bispo saiu do TABULEIRO.");
+     }
+    break;
+  default:
+    printf("Opcao invalida!");
+        break;
+    }
+    break;
+    //cavalo movi
+    case 4:
+    printf("O Cavalo move-se em L para qualquer lado, Para qual direcao voce quer mover?\n");
+    printf("1. Cima Direita\n");
+    printf("2. Baixo Direita\n");
+    printf("3. Cima Esquerda \n");
+    printf("4. Baixo Esquerda\n");
+    scanf("%d", &numerodevezes);
+    switch (numerodevezes)
+    {
+    case 1:
+ printf("Cima Direita\n");
+
+    case 2:
+       printf("Baixo Direita\n");
+    case 3:
+ 
+        printf("Cima Esquerda \n");
+    break;
+
+    case 4:
+ 
+        printf("Baixo Esquerda\n");
+    break;
+    
+    default:
+    printf("Opcao invalida!");
+        break;
+    }
+   
+    break;
+
+    //Rei movi
+    case 5:
+    printf("O Rei move-se apenas Uma vez, Para qual direcao voce quer mover?\n");
+    printf("1. Cima\n");
+    printf("2. Baixo\n");
+    printf("3. Esquerda\n");
+    printf("4. Direita\n");
+    scanf("%d", &direcaomenu);
+    switch (direcaomenu)
+    {
+    case 1:
+  printf("Quantas Vezes?\n");
+    scanf("%u", &numerodevezes);
+
+       if (numerodevezes >= 1 && numerodevezes < 3)
+    {
+      
+    
+
+    for (int peao = 0; peao <= numerodevezes - 1; peao++)
+    {
+        printf("Cima \n");
+    } 
+ }else{
+        printf("voce digitou um numero de vezes que o Rei nao anda.");
+     }
+   
+    break;
+
+    case 2:
+
+   
+    printf("Quantas Vezes?\n");
+    scanf("%d", &numerodevezes);
+    if (numerodevezes >= 1 && numerodevezes < 3)
+    {
+       
+    for (int peao = 0; peao <= numerodevezes - 1; peao++)
+    {
+        printf("Baixo \n");
+    }  
+}else{
+        printf("voce digitou um numero de vezes que o Rei nao anda.");
+     }
+    break;
+
+    case 3:
+ 
+        
+   
+    printf("Quantas Vezes?\n");
+    scanf("%d", &numerodevezes);
+   if (numerodevezes >= 1 && numerodevezes < 3)
+    {
+    for (int peao = 0; peao <= numerodevezes - 1; peao++)
+    {
+        printf("Esquerda \n");
+    } 
+     }else{
+        printf("voce digitou um numero de vezes que o Rei nao anda.");
+     }
+    
+    break;
+
+    case 4:
+
+        printf("Quantas Vezes?\n");
+    scanf("%d", &numerodevezes);
+    if (numerodevezes >= 1 && numerodevezes < 3)
+    {
+    for (int peao = 0; peao <= numerodevezes - 1; peao++)
+    {
+        printf("Direita \n");
+    } 
+  }else{
+        printf("voce digitou um numero de vezes que o Rei nao anda.");
+     }
+    break;
+    
+    default:
+    printf("Opcao invalida!");
+
+        break;
+
+    }
+
+
+    
+    break;
+
+    //Rainha movi
+    case 6:
+    printf("A Rainha move-se em Qualquer Direcao, Para qual direcao voce quer mover?\n");
+    printf("1. Cima Direita\n");
+    printf("2. Baixo Direita\n");
+    printf("3. Cima Esquerda \n");
+    printf("4. Baixo Esquerda\n");
+    printf("5. Cima\n");
+    printf("6. Baixo\n");
+    printf("7. Esquerda\n");
+    printf("8. Direita\n");
+    scanf("%d", &direcaomenu);
+    switch (direcaomenu)
+    {
+    case 1:
+    printf("Quantas Vezes?\n");
+    scanf("%d", &numerodevezes);
+
+    if (numerodevezes >= 1 && numerodevezes < 9)
+    {
+       
+    
+
+    for (int peao = 0; peao <= numerodevezes - 1; peao++)
+    {
+        printf("Cima Direita\n");
+    } 
+ }else{
+        printf("Sua Rainha saiu do TABULEIRO.");
+     }
+   
+    break;
+
+    case 2:
+   
+   
+    printf("Quantas Vezes?\n");
+    scanf("%d", &numerodevezes);
+ if (numerodevezes >= 1 && numerodevezes < 9)
+    {
+       
+    for (int peao = 0; peao <= numerodevezes - 1; peao++)
+    {
+        printf("Baixo Direita\n");
+    }  
+}else{
+        printf("Sua Rainha saiu do TABULEIRO.");
+     }
+    break;
+
+    case 3:
+ 
+    printf("Quantas Vezes?\n");
+    scanf("%d", &numerodevezes);
+   if (numerodevezes >= 1 && numerodevezes < 9)
+    {
+        
+   
+    for (int peao = 0; peao <= numerodevezes - 1; peao++)
+    {
+        printf("Cima Esquerda \n");
+    } 
+     }else{
+        printf("Sua Rainha saiu do TABULEIRO.");
+     }
+    
+    break;
+
+    case 4:
+ 
+
+    printf("Quantas Vezes?\n");
+    scanf("%d", &numerodevezes);
+   if (numerodevezes >= 1 && numerodevezes < 9)
+    {
+      
+   
+    for (int peao = 0; peao <= numerodevezes - 1; peao++)
+    {
+        printf("Baixo Esquerda\n");
+    } 
+  }else{
+        printf("Sua Rainha saiu do TABULEIRO.");
+     }
+    break;
+
+    case 5:
+    printf("Quantas Vezes?\n");
+    scanf("%d", &numerodevezes);
+
+    if (numerodevezes >= 1 && numerodevezes < 9)
+    {
+       
+    
+
+    for (int peao = 0; peao <= numerodevezes - 1; peao++)
+    {
+        printf("Cima \n");
+    } 
+ }else{
+        printf("Sua Rainha saiu do TABULEIRO.");
+     }
+   
+    break;
+
+    case 6:
+    
+    printf("Quantas Vezes?\n");
+    scanf("%d", &numerodevezes);
+ if (numerodevezes >= 1 && numerodevezes < 9)
+    {
+       
+    for (int peao = 0; peao <= numerodevezes - 1; peao++)
+    {
+        printf("Baixo \n");
+    }  
+}else{
+        printf("Sua Rainha saiu do TABULEIRO.");
+     }
+    break;
+    case 7:
+    
+    printf("Quantas Vezes?\n");
+    scanf("%d", &numerodevezes);
+   if (numerodevezes >= 1 && numerodevezes < 9)
+    {
+        
+   
+    for (int peao = 0; peao <= numerodevezes - 1; peao++)
+    {
+        printf("Esquerda \n");
+    } 
+     }else{
+        printf("Sua Rainha saiu do TABULEIRO.");
+     }
+    
+    break;
+
+    case 8:
+    
+    printf("Quantas Vezes?\n");
+    scanf("%d", &numerodevezes);
+   if (numerodevezes >= 1 && numerodevezes < 9)
+    {
+      
+   
+    for (int peao = 0; peao <= numerodevezes - 1; peao++)
+    {
+        printf("Direita \n");
+    } 
+  }else{
+        printf("Sua torre saiu do TABULEIRO.");
+     }
+    break;
+
+  default:
+    printf("Opcao invalida!");
+        break;
+        
+    }
+   
+    break;
+
+default:
+printf("Numero invalido");
+    break;
 }
+
+}
+
+
