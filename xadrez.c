@@ -11,7 +11,7 @@ printf("*******MOVIMENTACAO PECAS DE XADREZ*******\n");
 printf("1. Peao\n");
 printf("2. Torre\n");
 printf("3. Bispo\n");
-printf("4. Torre\n");
+printf("4. Cavalo\n");
 printf("5. Rei\n");
 printf("6. Rainha\n");
 scanf("%d", &menu1);
@@ -285,6 +285,7 @@ switch (menu1)
     break;
     //cavalo movi
     case 4:
+    int cavalo = 1;
     printf("O Cavalo move-se em L para qualquer lado, Para qual direcao voce quer mover?\n");
     printf("1. Cima Direita\n");
     printf("2. Baixo Direita\n");
@@ -294,18 +295,55 @@ switch (menu1)
     switch (numerodevezes)
     {
     case 1:
- printf("Cima Direita\n");
+
+    while (cavalo--)
+    {
+       for (int i = 0; i < 2; i++)
+       {
+        printf("Cima\n");
+       }
+       printf("Direita\n");
+       
+    }
+    
+break;
 
     case 2:
-       printf("Baixo Direita\n");
+    while (cavalo--)
+    {
+       for (int i = 0; i < 2; i++)
+       {
+        printf("Cima\n");
+       }
+       printf("Esquerda\n");
+       
+    }
+       break;
     case 3:
  
-        printf("Cima Esquerda \n");
+    while (cavalo--)
+    {
+       for (int i = 0; i < 2; i++)
+       {
+        printf("Baixo\n");
+       }
+       printf("Direita\n");
+       
+    }
     break;
 
     case 4:
  
-        printf("Baixo Esquerda\n");
+      
+    while (cavalo--)
+    {
+       for (int i = 0; i < 2; i++)
+       {
+        printf("Baixo\n");
+       }
+       printf("Esquerda\n");
+       
+    }
     break;
     
     default:
@@ -556,7 +594,7 @@ switch (menu1)
         printf("Direita \n");
     } 
   }else{
-        printf("Sua torre saiu do TABULEIRO.");
+        printf("Sua Rainha saiu do TABULEIRO.");
      }
     break;
 
@@ -573,6 +611,7 @@ printf("Numero invalido");
     break;
 }
 
+return 0;
 }
 
 
