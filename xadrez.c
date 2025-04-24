@@ -1,5 +1,84 @@
 #include <stdio.h>
 
+//movimento Basica....................................
+
+void moverdireita(int casas){
+    if (casas > 0)
+    {
+        printf("Direita\n");
+    moverdireita(casas - 1);
+}
+    }
+
+    void moveresquerda(int casas){
+        if (casas > 0)
+        {
+            printf("Esquerda\n");
+        moveresquerda(casas - 1);
+    }
+        }
+
+        void movercima(int casas){
+            if (casas > 0)
+            {
+                printf("Cima\n");
+            moveresquerda(casas - 1);
+        }
+            }
+        
+            void moverbaixo(int casas){
+                if (casas > 0)
+                {
+                    printf("Baixo\n");
+                moverbaixo(casas - 1);
+            }
+                }
+    ///////////////////////////////////////////////////////////////////////////////
+//movi diagonais
+
+                void moverdiagonalSdireita(int casas){
+                    if (casas > 0)
+                    {
+                        printf("Cima\n");
+                        printf("Direita\n");
+                        moverdiagonalSdireita(casas - 1);
+                    }
+                    
+                }
+
+                void moverdiagonalSesquerda(int casas){
+                    if (casas > 0)
+                    {
+                        printf("Cima\n");
+                        printf("Esquerda\n");
+                        moverdiagonalSesquerda(casas - 1);
+                    }
+                    
+                }
+
+                void moverdiagonalIesquerda(int casas){
+                    if (casas > 0)
+                    {
+                        printf("Baixo\n");
+                        printf("Esquerda\n");
+                        moverdiagonalIesquerda(casas - 1);
+                    }
+                    
+                }
+
+                void moverdiagonalIdireita(int casas){
+                    if (casas > 0)
+                    {
+                        printf("Baixo\n");
+                        printf("Direita\n");
+                        moverdiagonalIdireita(casas - 1);
+                    }
+                    
+                }
+
+
+
+
 int main(){
 //1rei
 //2rainha
@@ -125,13 +204,9 @@ switch (menu1)
     if (numerodevezes >= 1 && numerodevezes < 9)
     {
        
-    
+    movercima(numerodevezes);
 
-    for (int peao = 0; peao <= numerodevezes - 1; peao++)
-    {
-        printf("Cima \n");
-    } 
- }else{
+    }else{
         printf("Sua torre saiu do TABULEIRO.");
      }
    
@@ -144,11 +219,9 @@ switch (menu1)
     scanf("%d", &numerodevezes);
  if (numerodevezes >= 1 && numerodevezes < 9)
     {
-       
-    for (int peao = 0; peao <= numerodevezes - 1; peao++)
-    {
-        printf("Baixo \n");
-    }  
+    
+        moverbaixo(numerodevezes);
+
 }else{
         printf("Sua torre saiu do TABULEIRO.");
      }
@@ -161,11 +234,8 @@ switch (menu1)
    if (numerodevezes >= 1 && numerodevezes < 9)
     {
         
-   
-    for (int peao = 0; peao <= numerodevezes - 1; peao++)
-    {
-        printf("Esquerda \n");
-    } 
+        moveresquerda(numerodevezes);
+
      }else{
         printf("Sua torre saiu do TABULEIRO.");
      }
@@ -181,10 +251,8 @@ switch (menu1)
     {
       
    
-    for (int peao = 0; peao <= numerodevezes - 1; peao++)
-    {
-        printf("Direita \n");
-    } 
+        moverdireita(numerodevezes);
+    
   }else{
         printf("Sua torre saiu do TABULEIRO.");
      }
@@ -214,12 +282,9 @@ switch (menu1)
     if (numerodevezes >= 1 && numerodevezes < 9)
     {
        
-    
+    moverdiagonalSdireita(numerodevezes);
 
-    for (int peao = 0; peao <= numerodevezes - 1; peao++)
-    {
-        printf("Cima Direita\n");
-    } 
+    
  }else{
         printf("Seu Bispo saiu do TABULEIRO.");
      }
@@ -233,11 +298,9 @@ switch (menu1)
     scanf("%d", &numerodevezes);
  if (numerodevezes >= 1 && numerodevezes < 9)
     {
-       
-    for (int peao = 0; peao <= numerodevezes - 1; peao++)
-    {
-        printf("Baixo Direita\n");
-    }  
+    
+        moverdiagonalIdireita(numerodevezes);
+
 }else{
         printf("Seu Bispo saiu do TABULEIRO.");
      }
@@ -249,12 +312,8 @@ switch (menu1)
     scanf("%d", &numerodevezes);
    if (numerodevezes >= 1 && numerodevezes < 9)
     {
-        
-   
-    for (int peao = 0; peao <= numerodevezes - 1; peao++)
-    {
-        printf("Cima Esquerda \n");
-    } 
+        moverdiagonalSesquerda(numerodevezes);
+    
      }else{
         printf("Seu Bispo saiu do TABULEIRO.");
      }
@@ -269,11 +328,8 @@ switch (menu1)
    if (numerodevezes >= 1 && numerodevezes < 9)
     {
       
+        moverdiagonalIesquerda(numerodevezes);
    
-    for (int peao = 0; peao <= numerodevezes - 1; peao++)
-    {
-        printf("Baixo Esquerda\n");
-    } 
   }else{
         printf("Seu Bispo saiu do TABULEIRO.");
      }
@@ -464,12 +520,8 @@ break;
     if (numerodevezes >= 1 && numerodevezes < 9)
     {
        
-    
+    moverdiagonalSdireita(numerodevezes);
 
-    for (int peao = 0; peao <= numerodevezes - 1; peao++)
-    {
-        printf("Cima Direita\n");
-    } 
  }else{
         printf("Sua Rainha saiu do TABULEIRO.");
      }
@@ -483,11 +535,8 @@ break;
     scanf("%d", &numerodevezes);
  if (numerodevezes >= 1 && numerodevezes < 9)
     {
-       
-    for (int peao = 0; peao <= numerodevezes - 1; peao++)
-    {
-        printf("Baixo Direita\n");
-    }  
+    
+        moverdiagonalIdireita(numerodevezes);
 }else{
         printf("Sua Rainha saiu do TABULEIRO.");
      }
@@ -499,12 +548,8 @@ break;
     scanf("%d", &numerodevezes);
    if (numerodevezes >= 1 && numerodevezes < 9)
     {
-        
-   
-    for (int peao = 0; peao <= numerodevezes - 1; peao++)
-    {
-        printf("Cima Esquerda \n");
-    } 
+        moverdiagonalSesquerda(numerodevezes);
+     
      }else{
         printf("Sua Rainha saiu do TABULEIRO.");
      }
@@ -518,12 +563,9 @@ break;
     scanf("%d", &numerodevezes);
    if (numerodevezes >= 1 && numerodevezes < 9)
     {
-      
-   
-    for (int peao = 0; peao <= numerodevezes - 1; peao++)
-    {
-        printf("Baixo Esquerda\n");
-    } 
+    
+        moverdiagonalIesquerda(numerodevezes);
+
   }else{
         printf("Sua Rainha saiu do TABULEIRO.");
      }
@@ -536,12 +578,8 @@ break;
     if (numerodevezes >= 1 && numerodevezes < 9)
     {
        
-    
+    movercima(numerodevezes);
 
-    for (int peao = 0; peao <= numerodevezes - 1; peao++)
-    {
-        printf("Cima \n");
-    } 
  }else{
         printf("Sua Rainha saiu do TABULEIRO.");
      }
@@ -554,11 +592,9 @@ break;
     scanf("%d", &numerodevezes);
  if (numerodevezes >= 1 && numerodevezes < 9)
     {
-       
-    for (int peao = 0; peao <= numerodevezes - 1; peao++)
-    {
-        printf("Baixo \n");
-    }  
+     
+        moverbaixo(numerodevezes);
+
 }else{
         printf("Sua Rainha saiu do TABULEIRO.");
      }
@@ -570,11 +606,8 @@ break;
    if (numerodevezes >= 1 && numerodevezes < 9)
     {
         
+        moveresquerda(numerodevezes);
    
-    for (int peao = 0; peao <= numerodevezes - 1; peao++)
-    {
-        printf("Esquerda \n");
-    } 
      }else{
         printf("Sua Rainha saiu do TABULEIRO.");
      }
@@ -588,11 +621,8 @@ break;
    if (numerodevezes >= 1 && numerodevezes < 9)
     {
       
+        moverdireita(numerodevezes);
    
-    for (int peao = 0; peao <= numerodevezes - 1; peao++)
-    {
-        printf("Direita \n");
-    } 
   }else{
         printf("Sua Rainha saiu do TABULEIRO.");
      }
@@ -613,5 +643,3 @@ printf("Numero invalido");
 
 return 0;
 }
-
-
